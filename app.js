@@ -18,7 +18,7 @@ app.get('/api', (req, res) => {
 
 app.post('/api/posts', verifyToken, (req, res) => {
     //we added verifyToken moddleware function. We have to define that function
-    jwt.verify(req.token, 'patates', (err, authData) => {
+    jwt.verify(req.token, 'secretkeyuptoU', (err, authData) => {
         if (err) {
             res.sendStatus(403);
         } else {
@@ -40,7 +40,7 @@ app.post('/api/login', (req, res) => {
         email: 'user@gmail.com'
     };
 
-    jwt.sign({user: user}, 'patates', {expiresIn: '30s'}, (err, token) => {
+    jwt.sign({user: user}, 'secretkeyuptoU', {expiresIn: '30s'}, (err, token) => {
         res.json({
             token
         });
