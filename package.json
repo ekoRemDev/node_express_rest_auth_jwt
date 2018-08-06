@@ -2,7 +2,7 @@
   "name": "node_express_rest_auth_jwt",
   "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ekoRemDev/node_express_rest_auth_jwt/issues"
   },
-  "homepage": "https://github.com/ekoRemDev/node_express_rest_auth_jwt#readme"
+  "homepage": "https://github.com/ekoRemDev/node_express_rest_auth_jwt#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0"
+  }
 }
